@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="icon" href="https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt7d4081e51802d075/5e14fc9a980c937e6d6451f0/ui_nav_wow_yellow_icon.png" type="image/x-png">
+<link rel="shortcut icon" href="https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt7d4081e51802d075/5e14fc9a980c937e6d6451f0/ui_nav_wow_yellow_icon.png" type="image/x-png">
+<title>Holynice</title>
+<style>
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+body{
+	background: #494A5F;
+	color: #D5D6E2;
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
+}
+@-webkit-keyframes delayedSpinner {
+  0% {
+    -webkit-transform:rotate(0deg);
+            transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(1turn);
+            transform:rotate(1turn);
+  }
+}
+@keyframes delayedSpinner {
+  0% {
+    -webkit-transform:rotate(0deg);
+            transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(1turn);
+            transform:rotate(1turn);
+  }
+}
+.page-loading__icon {
+  overflow : hidden;
+  width : 29px;
+  height : 29px;
+  background : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAMAAABjROYVAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAwBQTFRFAAAAZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZm+zfHiAAAAQB0Uk5TAC5beqi42Pb3+Pn6+/zev7CAYDAPSoaz7/Dx8vP09f3+/8CQUBAdZq/q6+zt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') no-repeat;
+  background-size : contain;
+  -webkit-animation : delayedSpinner .61s linear 0s infinite;
+          animation : delayedSpinner .61s linear 0s infinite;
+}
+html {
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: local;
+	background-size: cover;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+			color:#fff;
+}
+.frosted-panel {
+	-webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+	        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+svg {
+	border-radius: 5px;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1
+}
+.content {
+	z-index: 1;
+	overflow: hidden;
+}
+.flex-container {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.wh {
+	font-size: 30px;
+	font-family: 'Electrolize', sans-serif;
+	white-space: nowrap;
+}
+.wh:nth-child(1) {
+	display: inline;
+}
+.wh:nth-child(2),
+.wh:nth-child(3) {
+	display: none;
+}
+@media only screen and (min-width: 600px) {
+	.wh {
+		font-size: 40px;
+	}
+
+	.wh:nth-child(1),
+	.wh:nth-child(3) {
+		display: none;
+	}
+
+	.wh:nth-child(2) {
+		display: inline;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.wh {
+		font-size: 40px;
+	}
+
+	.wh:nth-child(1),
+	.wh:nth-child(2) {
+		display: none;
+	}
+
+	.wh:nth-child(3) {
+		display: inline;
+	}
+}
+</style>
+</head>
+<body space-top-bot="50px">
+<div class="page-loading__icon"></div>
+<div class="frosted-panel" panel-dimensions="80% 60%" breakpoint-type="min-width" breakpoints="600px 80% 80%, 1200px 60% 500px">
+	<svg>
+		<filter id="blurMe" filterRes="1200" color-interpolation-filters="sRGB">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="7" />
+		</filter>
+		<image xlink:href="https://bnetcmsus-a.akamaihd.net/cms/blog_thumbnail/xn/XNOHJFN4GOM21531938906466.jpg" x="0" y="0" width="2880" height="1620" filter="url(#blurMe)" />
+	</svg>
+	<div class="content" content-margin="5px">
+		<div class="flex-container">
+			<span class="wh">旧服务器坏了<BR>公会网站停摆<BR>核心件有损坏<BR>又没钱买新的<BR>点击<a href="index.html" style="text-decoration: none;;color:yellow;" onmouseover="this.style.cssText='text-decoration: none;color:red;'" onmouseout="this.style.cssText='text-decoration: none;color:yellow;'">返回首页</a><BR>上语音联系吧</span>
+			<span class="wh">旧服务器坏了<BR>公会网站停摆<BR>核心件有损坏<BR>又没钱买新的<BR>点击<a href="index.html" style="text-decoration: none;;color:yellow;" onmouseover="this.style.cssText='text-decoration: none;color:red;'" onmouseout="this.style.cssText='text-decoration: none;color:yellow;'">返回首页</a><BR>上语音联系吧</span>
+			<span class="wh">旧服务器坏了，公会网站停摆。<BR>核心件有损坏，又没钱买新的。<BR>点击<a href="index.html" style="text-decoration: none;;color:yellow;" onmouseover="this.style.cssText='text-decoration: none;color:red;'" onmouseout="this.style.cssText='text-decoration: none;color:yellow;'">返回首页</a>，上语音联系吧。</span>
+		</div>
+	</div>
+</div>
+<script>
+// endsWith polyfill IE11
+if (!String.prototype.endsWith) {
+  String.prototype.endsWith = function(search, this_len) {
+      if (this_len === undefined || this_len > this.length) {
+          this_len = this.length;
+      }
+      return this.substring(this_len - search.length, this_len) === search;
+  };
+}
+
+/* Frosted Panel - sourced from https://github.com/cryptodescriptor/frosted-panel */
+
+var frostedPanel = {
+  e : {
+    img : document.querySelector('image'),
+    svg : document.querySelector('svg'),
+    panel : document.querySelector('.frosted-panel'),
+    content : document.querySelector('.content'),
+    html : document.documentElement,
+    loading : document.querySelector('.page-loading__icon')
+  },
+
+  config : {
+    'breakpoints' : []
+  },
+
+  error : function(s) {
+    console.log(s)
+  },
+
+  valid_num : function(str) {
+    return (!isNaN(str) && str != "" && str != null);
+  },
+
+  validate_wh : function(val) {
+    var val = val.toLowerCase();
+    var num;
+
+    if (val === 'auto') {
+      return true;
+    } else if (!val.endsWith('px') && !val.endsWith('%')) {
+      return false;
+    } else if (val.endsWith('px')) {
+      num = this.valid_num(val.replace('px', ''));
+    } else if (val.endsWith('%')) {
+      num = this.valid_num(val.replace('%', ''));
+    }
+
+    return (!num) ? false : true;
+  },
+
+  ignoring_breakpoint_err : function(breakpoint) {
+    this.error('Ignoring breakpoint: "' + breakpoint + '"');
+  },
+
+  invalid_breakpoint_err : function(breakpoint, val, i) {
+    var joined = breakpoint.join(' ');
+
+    this.error('Invalid value "' + val + '" at breakpoint: "' + 
+      joined + '", index: ' + i);
+
+    this.ignoring_breakpoint_err(joined);
+  },
+
+  valid_breakpoint : function(breakpoint) {
+    // should be 3 in length
+    if (breakpoint.length !== 3) {
+      var joined = breakpoint.join(' ');
+      this.error('Expected 3 values at breakpoint: "' + joined + '"');
+      this.ignoring_breakpoint_err(joined);
+      return false;
+    }
+
+    // validate actual breakpoint width
+    var b = breakpoint[0].toLowerCase();
+
+    // make sure breakpoint ends with px and is a number
+    if (!b.endsWith('px') || !this.valid_num(b.replace('px', ''))) {
+      this.invalid_breakpoint_err(breakpoint, b, 0);
+      return false;
+    }
+
+    // validate width and height values
+    var val;
+
+    for (var i = 1; i < 3; i++) {
+      val = breakpoint[i];
+
+      if (!this.validate_wh(val)) {
+        this.invalid_breakpoint_err(breakpoint, val, i);
+        return false;
+      }
+    }
+    return true;
+  },
+
+  load_breakpoints : function() {
+    // check for breakpoint attr
+    var panel_breakpoints = this.e.panel.getAttribute('breakpoints');
+
+    // if attribute missing, return
+    if (!panel_breakpoints) return;
+
+    // parse and validate breakpoints
+    var breakpoints = panel_breakpoints.split(',');
+    var breakpoint;
+
+    for (var i = 0; i < breakpoints.length; i++) {
+      // breakpoint, width, height
+      breakpoint = breakpoints[i].trim().split(' ');
+
+      // store breakpoint as a number
+      if (this.valid_breakpoint(breakpoint)) {
+        breakpoint[0] = parseInt(breakpoint[0]);
+        this.config.breakpoints.push(breakpoint);
+      }
+    }
+
+    var self = this;
+
+    // sort: ascending min-width, descending max-width
+    this.config.breakpoints = this.config.breakpoints.sort(function(a, b) {
+      return (self.config.maxWidth === true) ? (b[0] - a[0]) : (a[0] - b[0]);
+    });
+  },
+
+  load_attributes : function() {
+      var c = this.config;
+
+      c['imageWidth'] = this.e.img.getAttribute('width');
+      c['imageHeight'] = this.e.img.getAttribute('height');
+
+      c['paddingTopBot'] = parseInt(
+          document.body.getAttribute('space-top-bot')
+        ) || 0;
+
+      c['contentMargin'] = parseInt(
+          this.e.content.getAttribute('content-margin')
+        ) || 0;
+
+      c['brType'] = this.e.panel.getAttribute('breakpoint-type') || 'min-width';
+
+      c['maxWidth'] = this.config.brType.toLowerCase() === 'max-width';
+  },
+
+  load_config : function() {
+    var attr = 'panel-dimensions';
+    var panel_dimensions = this.e.panel.getAttribute(attr);
+
+    // check attribute exists and isnt empty
+    if (!panel_dimensions) {
+      this.error('Empty/Missing required attr "'+attr+'"!');
+      return false;
+    }
+
+    var wh = panel_dimensions.split(' ');
+
+    // verify we have 2 values
+    if (wh.length !== 2) {
+      this.error('Unexpected length "' + wh.length + '" for "'+attr+'" attr!');
+      return false;
+    }
+
+    // validate width and height values
+    for (var i = 0; i < wh.length; i++) {
+      if (!this.validate_wh(wh[i])) {
+        this.error('Invalid value "' + wh[0] + '" for "'+attr+'" attr!');
+        return false;
+      }
+    }
+
+    this.config['width'] = wh[0];
+    this.config['height'] = wh[1];
+
+    // load the rest of the attributes
+    this.load_attributes();
+
+    // load breakpoints
+    this.load_breakpoints();
+
+    return true;
+  },
+
+  is_suitable_breakpoint : function(breakpoint, viewportWidth) {
+    var condition;
+
+    if (this.config.maxWidth === true) {
+      condition = viewportWidth <= breakpoint[0];
+    } else {
+      condition = viewportWidth >= breakpoint[0];
+    }
+
+    return (condition === true) ? true : false;
+  },
+
+  find_suitable_breakpoint : function(viewportWidth) {
+    var current, breakpoint = null;
+
+    for (var i = 0; i < this.config.breakpoints.length; i++) {
+      current = this.config.breakpoints[i];
+      if (this.is_suitable_breakpoint(current, viewportWidth)) {
+        breakpoint = current;
+        continue;
+      }
+      break;
+    }
+    return breakpoint;
+  },
+
+  fetch_breakpoint : function(viewportWidth) {
+    // if breakpoints are empty
+    if (this.config.breakpoints.length === 0) return null;
+
+    // if we don't currently need a breakpoint
+    if (this.config.maxWidth === true) {
+      if (viewportWidth > this.config.breakpoints[0][0]) return null;
+    } else {
+      if (viewportWidth < this.config.breakpoints[0][0]) return null;
+    }
+
+    return this.find_suitable_breakpoint(viewportWidth);
+  },
+
+  auto : {
+    'w' : null,
+    'h' : null
+  },
+
+  toggle_auto : function(on, type, panelWidthOrHeightPx) {
+    var w_or_h = (type === 'w') ? 'width' : 'height';
+    if ((on === true) && (this.auto[type] === false || this.auto[type] === null)) {
+      this.e.content.style[w_or_h] = 'auto';
+      this.e.panel.style[w_or_h] = 'auto';
+      this.auto[type] = true;
+    } else if (on === false) {
+      this.e.content.style[w_or_h] = panelWidthOrHeightPx - (this.config.contentMargin*2) + 'px';
+      this.e.panel.style[w_or_h] = panelWidthOrHeightPx + 'px';
+      this.auto[type] = false;
+    }
+  },
+
+  set_pixel_val : function(val, viewportWidthOrHeight, type) {
+    if (val.endsWith('%')) {
+      var px = (viewportWidthOrHeight/100)*val.replace('%', '');
+      this.toggle_auto(false, type, px);
+      return px;
+    } else if (val.endsWith('px')) {
+      var px = parseInt(val.replace('px', ''));
+      this.toggle_auto(false, type, px);
+      return px;
+    } else if (val.toLowerCase() === 'auto') {
+      var m = (this.config.contentMargin*2);
+      this.toggle_auto(true, type);
+      return ((type === 'w') ? (this.e.content.clientWidth+m) : (this.e.content.clientHeight+m));
+    }
+  },
+
+  calc_cover_size : function() {
+    // calculate the size of the scaled bg image
+    var width = this.config.imageWidth;
+    var height = this.config.imageHeight;
+
+    var object = document.body;
+
+    // Step 1 - Get the ratio of the div + the image
+    var imageRatio = width/height;
+    var coverRatio = object.offsetWidth/object.offsetHeight;
+
+    // Step 2 - Work out which ratio is greater
+    if (imageRatio >= coverRatio) {
+        // The Height is our constant
+        var coverHeight = object.offsetHeight;
+        var scale = (coverHeight / height);
+        var coverWidth = width * scale;
+    } else {
+        // The Width is our constant
+        var coverWidth = object.offsetWidth;
+        var scale = (coverWidth / width);
+        var coverHeight = height * scale;
+    }
+
+    return [coverWidth, coverHeight, scale];
+  },
+
+  set_panel_width_and_height : function(viewportWidth, viewportHeight) {
+    // See if we hit a breakpoint
+    var breakpoint = this.fetch_breakpoint(viewportWidth);
+
+    if (breakpoint === null) {
+      var w = this.config.width;
+      var h = this.config.height;
+    } else {
+      var w = breakpoint[1];
+      var h = breakpoint[2];
+    }
+
+    // Convert to pixels and set width + height
+    var w = this.set_pixel_val(w, viewportWidth, 'w');
+    var h = this.set_pixel_val(h, viewportHeight, 'h');
+
+    // Return w,h so we can calc pan + zoom values
+    return [w, h];
+  },
+  
+  previous_viewport_w : null,
+  previous_viewport_h : null,
+
+  viewport_size_not_changed : function(viewportWidth, viewportHeight) {
+    return (
+        this.previous_viewport_w === viewportWidth &&
+        this.previous_viewport_h === viewportHeight
+      );
+  },
+
+  is_mobile : function() {
+    return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  },
+
+  get_device_width_and_height : function() {
+    // Mobile versions of Chrome have a problem with innerWidth after rotation.
+    // Use clientWidth + clientHeight instead.
+    var viewportWidth = document.documentElement.clientWidth;
+    var viewportHeight = document.documentElement.clientHeight;
+
+    if (!this.is_mobile()) {
+      var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    } else {
+      var scrollbarWidth = 0;
+    }
+
+    // If scrollbar is visible
+    viewportWidth = (scrollbarWidth > 0) ? (viewportWidth+scrollbarWidth) : viewportWidth;
+
+    return [viewportWidth, viewportHeight];
+  },
+
+  prepare_pan_and_zoom : function() {
+    // Get viewport width and height
+    var viewPortWH = this.get_device_width_and_height();
+    var viewportWidth = viewPortWH[0];
+    var viewportHeight = viewPortWH[1];
+    
+    // Don't need to do anything if viewport size didn't change
+    if (this.viewport_size_not_changed(viewportWidth, viewportHeight)) {
+      return null;
+    }
+
+    this.previous_viewport_w = viewportWidth;
+    this.previous_viewport_h = viewportWidth;
+
+    // Set Panel width and height
+    var wh = this.set_panel_width_and_height(viewportWidth, viewportHeight);
+    var panelW = wh[0];
+    var panelH = wh[1];
+
+    // Set html minHeight for padding effect
+    this.e.html.style.minHeight = (panelH + (this.config.paddingTopBot*2)) + 'px';
+
+    // Get size of scaled background image
+    var width_height_scale = this.calc_cover_size();
+    var imageWidth = width_height_scale[0];
+    var imageHeight = width_height_scale[1];
+
+    // Make svg behave like a centered background image
+    var cropX = (imageWidth-viewportWidth)/2;
+    var cropY = (imageHeight-viewportHeight)/2;
+
+    // Calculate how much we need to pan
+    var panW = (-(viewportWidth-panelW)/2) - cropX;
+    var panH = (-(viewportHeight-panelH)/2) - cropY;
+
+    var scale = width_height_scale[2];
+
+    return [panW, panH, scale];
+  },
+
+  pan_and_zoom : function() {
+    var panW_panH_scale = this.prepare_pan_and_zoom();
+    if (panW_panH_scale === null) return;
+    var panW = panW_panH_scale[0];
+    var panH = panW_panH_scale[1];
+    var scale = panW_panH_scale[2];
+    this.e.img.setAttribute('transform', 'translate('+panW+' '+panH+') scale('+scale+')');
+  },
+
+  started : false,
+  bg_img : null,
+
+  ready : function(callback) {
+    // Check the background image is loaded before starting frostedPanel
+    var src = this.e.img.getAttribute('xlink:href');
+
+    this.bg_img = src;
+    
+    var img = new Image();
+
+    img.onload = function() {
+      if (!this.started) { 
+        this.started = true;
+        callback();
+      }
+    }
+
+    img.src = src;
+
+    if (img.complete) img.onload();
+  },
+
+  init : function() {
+    var bg = this.bg_img;
+
+    // Set background image
+    document.body.style.backgroundImage = 'url(' + bg + ')';
+
+    // Set content margin
+    this.e.content.style.margin = frostedPanel.config.contentMargin + 'px';
+
+    // Start Resize Listener
+    window.addEventListener("resize", function() {
+      frostedPanel.pan_and_zoom();
+    });
+
+    // Do initial pan and zoom
+    this.pan_and_zoom();
+
+    // Hide loading and display panel
+    this.e.loading.style.display = 'none';
+    this.e.panel.style.visibility = 'visible';
+  }
+}
+
+var loaded = frostedPanel.load_config();
+
+if (loaded) {
+  frostedPanel.ready(function() {
+    frostedPanel.init();
+  });
+} else {
+  frostedPanel.error('frostedPanel aborted!');
+}
+</script>
+</body>
+</html>
